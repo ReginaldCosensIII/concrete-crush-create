@@ -190,17 +190,16 @@ function Hero() {
 /* ---------------- SERVICE STRIP ---------------- */
 function ServiceStrip() {
   const items = ["Brick", "Block", "Stone", "Concrete", "Repairs", "Restoration", "Hardscape"];
+  const loop = [...items, ...items, ...items, ...items];
   return (
-    <div className="bg-brand-red text-white py-3 border-y-2 border-black">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
-        {items.map((it, i) => (
-          <span key={it} className="flex items-center gap-3">
+    <div className="bg-brand-red text-white py-3 border-y-2 border-black overflow-hidden">
+      <div className="flex w-max animate-marquee items-center gap-6 whitespace-nowrap">
+        {loop.map((it, i) => (
+          <span key={i} className="flex items-center gap-6">
             <span className="font-display font-bold uppercase tracking-[0.18em] text-sm">
               {it}
             </span>
-            {i < items.length - 1 && (
-              <Star className="h-3 w-3 text-brand-gold fill-brand-gold" />
-            )}
+            <Star className="h-3 w-3 text-brand-gold fill-brand-gold" />
           </span>
         ))}
       </div>
