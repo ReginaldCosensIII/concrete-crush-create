@@ -190,17 +190,16 @@ function Hero() {
 /* ---------------- SERVICE STRIP ---------------- */
 function ServiceStrip() {
   const items = ["Brick", "Block", "Stone", "Concrete", "Repairs", "Restoration", "Hardscape"];
+  const loop = [...items, ...items, ...items, ...items];
   return (
-    <div className="bg-brand-red text-white py-3 border-y-2 border-black">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-1">
-        {items.map((it, i) => (
-          <span key={it} className="flex items-center gap-3">
+    <div className="bg-brand-red text-white py-3 border-y-2 border-black overflow-hidden">
+      <div className="flex w-max animate-marquee items-center gap-6 whitespace-nowrap">
+        {loop.map((it, i) => (
+          <span key={i} className="flex items-center gap-6">
             <span className="font-display font-bold uppercase tracking-[0.18em] text-sm">
               {it}
             </span>
-            {i < items.length - 1 && (
-              <Star className="h-3 w-3 text-brand-gold fill-brand-gold" />
-            )}
+            <Star className="h-3 w-3 text-brand-gold fill-brand-gold" />
           </span>
         ))}
       </div>
@@ -233,7 +232,6 @@ function Services() {
               key={title}
               className="group relative bg-charcoal-2 border border-white/10 hover:border-brand-red/60 transition-all p-6 rounded-sm overflow-hidden"
             >
-              <div className="absolute top-0 right-0 h-12 w-12 bg-brand-red/0 group-hover:bg-brand-red transition-colors clip-slash" />
               <div className="h-12 w-12 rounded-sm bg-brand-red/15 border border-brand-red/40 flex items-center justify-center mb-4 group-hover:bg-brand-red transition-colors">
                 <Icon className="h-6 w-6 text-brand-red group-hover:text-white transition-colors" />
               </div>
@@ -497,42 +495,18 @@ function ServiceArea() {
         <div className="relative">
           <div className="aspect-square max-w-[520px] mx-auto relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand-red/20 to-transparent blur-3xl" />
-            <div className="relative h-full w-full rounded-sm bg-charcoal-2 border border-white/10 p-8 flex items-center justify-center overflow-hidden">
-              {/* Stylized map */}
-              <svg viewBox="0 0 400 400" className="w-full h-full">
-                <defs>
-                  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" strokeWidth="0.3" opacity="0.15" />
-                  </pattern>
-                </defs>
-                <rect width="400" height="400" fill="url(#grid)" />
-                {/* Abstract states shape */}
-                <path
-                  d="M60 180 L120 150 L180 130 L240 120 L310 140 L340 180 L320 230 L260 250 L200 260 L140 250 L80 230 Z"
-                  fill="oklch(0.18 0.005 0)"
-                  stroke="oklch(0.55 0.22 27)"
-                  strokeWidth="2"
-                />
-                <path
-                  d="M120 250 L170 270 L220 280 L260 270 L290 290 L240 320 L180 310 L130 290 Z"
-                  fill="oklch(0.16 0.005 0)"
-                  stroke="oklch(0.55 0.22 27)"
-                  strokeWidth="2"
-                />
-                {/* Frederick MD pin */}
-                <circle cx="215" cy="195" r="14" fill="oklch(0.55 0.22 27)" />
-                <circle cx="215" cy="195" r="6" fill="white" />
-                <circle cx="215" cy="195" r="24" fill="none" stroke="oklch(0.55 0.22 27)" strokeWidth="1" opacity="0.5">
-                  <animate attributeName="r" from="14" to="40" dur="2s" repeatCount="indefinite" />
-                  <animate attributeName="opacity" from="0.6" to="0" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <text x="215" y="170" textAnchor="middle" fill="white" fontFamily="Barlow Condensed" fontSize="14" fontWeight="700" letterSpacing="2">
-                  FREDERICK, MD
-                </text>
-              </svg>
+            <div className="relative h-full w-full rounded-sm bg-charcoal-2 border border-white/10 overflow-hidden">
+              <iframe
+                title="Frederick, MD service area map"
+                src="https://www.google.com/maps?q=Frederick,MD&z=10&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-full w-full border-0 grayscale contrast-110"
+                allowFullScreen
+              />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-brand-red text-white px-5 py-3 rounded-sm shadow-xl shadow-brand-red/40 font-display uppercase font-bold tracking-wider text-sm">
-              Home Base
+            <div className="absolute -bottom-4 -right-4 bg-brand-red text-white px-5 py-3 rounded-sm shadow-xl shadow-brand-red/40 font-display uppercase font-bold tracking-wider text-sm z-10">
+              Home Base · Frederick, MD
             </div>
           </div>
         </div>
