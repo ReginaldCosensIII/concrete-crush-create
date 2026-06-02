@@ -233,7 +233,6 @@ function Services() {
               key={title}
               className="group relative bg-charcoal-2 border border-white/10 hover:border-brand-red/60 transition-all p-6 rounded-sm overflow-hidden"
             >
-              <div className="absolute top-0 right-0 h-12 w-12 bg-brand-red/0 group-hover:bg-brand-red transition-colors clip-slash" />
               <div className="h-12 w-12 rounded-sm bg-brand-red/15 border border-brand-red/40 flex items-center justify-center mb-4 group-hover:bg-brand-red transition-colors">
                 <Icon className="h-6 w-6 text-brand-red group-hover:text-white transition-colors" />
               </div>
