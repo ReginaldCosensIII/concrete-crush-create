@@ -16,13 +16,13 @@ import {
   Wrench,
   Mail,
   Flame,
-  Brick,
   Droplets,
   HardHat,
   Mountain,
   Square,
   Footprints,
   Hammer as HammerIcon,
+  Grid3x3 as BrickIcon,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { BrushAccent } from "@/components/site/BrushAccent";
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/")({
 });
 
 const SERVICES = [
-  { icon: Brick, title: "Brick Work", desc: "New construction, repairs, and structural brick walls done by hand." },
+  { icon: BrickIcon, title: "Brick Work", desc: "New construction, repairs, and structural brick walls done by hand." },
   { icon: Layers, title: "Block Work", desc: "CMU foundations, structural walls and rough-in block built to spec." },
   { icon: Square, title: "Concrete Work", desc: "Sidewalks, slabs, pads and footers poured clean and level." },
   { icon: Mountain, title: "Stone Veneer", desc: "Natural and manufactured stone exteriors with crisp coursing." },
