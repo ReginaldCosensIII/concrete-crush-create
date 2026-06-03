@@ -26,8 +26,8 @@ export function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-charcoal/95 backdrop-blur border-b border-white/10 shadow-lg shadow-black/40"
-          : "bg-gradient-to-b from-black/70 to-transparent"
+          ? "bg-white/95 backdrop-blur border-b border-black/10 shadow-lg shadow-black/10"
+          : "bg-gradient-to-b from-white/80 to-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between h-20">
@@ -37,10 +37,10 @@ export function Header() {
             alt="Precise Masonry & Concrete logo"
             width={56}
             height={56}
-            className="h-14 w-14 rounded-full ring-1 ring-white/10"
+            className="h-14 w-14 rounded-full ring-1 ring-black/10"
           />
           <div className="hidden sm:block leading-tight">
-            <div className="font-display font-extrabold uppercase text-white text-lg tracking-wide">
+            <div className="font-display font-extrabold uppercase text-neutral-900 text-lg tracking-wide">
               Precise
             </div>
             <div className="font-display text-[10px] uppercase tracking-[0.22em] text-brand-red">
@@ -54,7 +54,7 @@ export function Header() {
             <a
               key={n.href}
               href={n.href}
-              className="font-display uppercase text-sm tracking-wider text-white/85 hover:text-brand-red transition-colors"
+              className="font-display uppercase text-sm tracking-wider text-neutral-700 hover:text-brand-red transition-colors"
             >
               {n.label}
             </a>
@@ -64,14 +64,14 @@ export function Header() {
         <div className="flex items-center gap-3">
           <a
             href="tel:2272254964"
-            className="hidden md:flex items-center gap-2 font-display font-bold text-white hover:text-brand-red transition-colors"
+            className="hidden md:flex items-center gap-2 font-display font-bold text-neutral-900 hover:text-brand-red transition-colors"
           >
             <Phone className="h-4 w-4" />
             <span className="tracking-wider">227-225-4964</span>
           </a>
           <a
             href="#contact"
-            className="hidden sm:inline-flex items-center bg-brand-red hover:bg-brand-red-deep transition-colors text-white font-display font-bold uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm shadow-lg shadow-brand-red/30"
+            className="hidden sm:inline-flex items-center bg-brand-red hover:bg-brand-red-deep transition-colors text-neutral-900 font-display font-bold uppercase tracking-wider text-sm px-5 py-2.5 rounded-sm shadow-lg shadow-brand-red/30"
           >
             Free Estimate
           </a>
@@ -79,7 +79,7 @@ export function Header() {
             type="button"
             aria-label="Open menu"
             onClick={() => setOpen((v) => !v)}
-            className="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-sm bg-white/10 text-white"
+            className="lg:hidden inline-flex items-center justify-center h-10 w-10 rounded-sm bg-black/[0.06] text-neutral-900"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -87,21 +87,21 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-white/10 bg-charcoal/98 backdrop-blur">
+        <div className="lg:hidden border-t border-black/10 bg-white/98 backdrop-blur">
           <nav className="flex flex-col px-4 py-3">
             {NAV.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="font-display uppercase text-base tracking-wider text-white/90 hover:text-brand-red py-3 border-b border-white/5"
+                className="font-display uppercase text-base tracking-wider text-neutral-800 hover:text-brand-red py-3 border-b border-black/5"
               >
                 {n.label}
               </a>
             ))}
             <a
               href="tel:2272254964"
-              className="mt-3 flex items-center gap-2 font-display font-bold text-white"
+              className="mt-3 flex items-center gap-2 font-display font-bold text-neutral-900"
             >
               <Phone className="h-4 w-4" /> 227-225-4964
             </a>
