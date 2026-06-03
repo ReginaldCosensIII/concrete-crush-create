@@ -238,8 +238,8 @@ function Services() {
           subtitle="Over 20 years of hands-on craftsmanship — every job done right the first time."
         />
 
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {SERVICES.map(({ icon: Icon, title, desc }) => (
+        <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {PRIMARY_SERVICES.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
               className="group relative bg-charcoal-2 border border-white/10 hover:border-brand-red/60 transition-all p-6 rounded-sm overflow-hidden"
@@ -253,6 +253,20 @@ function Services() {
               <p className="mt-2 text-sm text-white/65 leading-relaxed">{desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 border-t border-white/10 pt-8">
+          <h3 className="font-display font-bold uppercase text-sm tracking-[0.2em] text-brand-red mb-5">
+            Also Offering
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-3">
+            {ADDITIONAL_SERVICES.map((s) => (
+              <li key={s} className="flex items-center gap-3 text-white/80">
+                <span className="h-1.5 w-1.5 bg-brand-red rotate-45 shrink-0" />
+                <span className="text-sm font-medium">{s}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
