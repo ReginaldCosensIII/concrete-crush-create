@@ -123,8 +123,8 @@ function Hero() {
         height={1080}
         className="absolute inset-0 -z-20 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/95 via-black/80 to-black/40" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-transparent to-black/60" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
 
       <div className="mx-auto max-w-7xl px-4 lg:px-8 w-full">
         <div className="max-w-3xl">
