@@ -71,6 +71,18 @@ const SERVICES = [
   { icon: Sparkles, title: "Custom Masonry", desc: "One-off hardscape and architectural detail work, built to spec." },
 ];
 
+const PRIMARY_SERVICES = SERVICES.slice(0, 6);
+const ADDITIONAL_SERVICES = [
+  "Driveways & Steps",
+  "Masonry Repairs",
+  "Waterproofing",
+  "Parging & Tuckpointing",
+  "Fire Pits & Fireplaces",
+  "Custom Masonry",
+  "Chimney Repair",
+  "Foundation Repair",
+];
+
 const FEATURED = [
   { title: "Patios", img: heroImg, span: "lg:col-span-2 lg:row-span-2" },
   { title: "Retaining Walls", img: imgRetaining, span: "" },
