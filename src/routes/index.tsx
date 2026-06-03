@@ -222,7 +222,7 @@ function ServiceStrip() {
 /* ---------------- SERVICES ---------------- */
 function Services() {
   return (
-    <section id="services" className="relative py-24 bg-neutral-50">
+    <section id="services" className="relative py-24 bg-charcoal">
       <div
         className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{
@@ -242,26 +242,26 @@ function Services() {
           {PRIMARY_SERVICES.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="group relative bg-neutral-100 border border-black/10 hover:border-brand-red/60 transition-all p-6 rounded-sm overflow-hidden"
+              className="group relative bg-charcoal-2 border border-white/10 hover:border-brand-red/60 transition-all p-6 rounded-sm overflow-hidden"
             >
               <div className="h-12 w-12 rounded-sm bg-brand-red/15 border border-brand-red/40 flex items-center justify-center mb-4 group-hover:bg-brand-red transition-colors">
-                <Icon className="h-6 w-6 text-brand-red group-hover:text-neutral-900 transition-colors" />
+                <Icon className="h-6 w-6 text-brand-red group-hover:text-white transition-colors" />
               </div>
-              <h3 className="font-display font-bold uppercase text-xl text-neutral-900 tracking-wide">
+              <h3 className="font-display font-bold uppercase text-xl text-white tracking-wide">
                 {title}
               </h3>
-              <p className="mt-2 text-sm text-neutral-600 leading-relaxed">{desc}</p>
+              <p className="mt-2 text-sm text-white/65 leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 border-t border-black/10 pt-8">
+        <div className="mt-12 border-t border-white/10 pt-8">
           <h3 className="font-display font-bold uppercase text-sm tracking-[0.2em] text-brand-red mb-5">
             Also Offering
           </h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-3">
             {ADDITIONAL_SERVICES.map((s) => (
-              <li key={s} className="flex items-center gap-3 text-neutral-700">
+              <li key={s} className="flex items-center gap-3 text-white/80">
                 <span className="h-1.5 w-1.5 bg-brand-red rotate-45 shrink-0" />
                 <span className="text-sm font-medium">{s}</span>
               </li>
@@ -289,7 +289,7 @@ function Featured() {
             <a
               key={f.title}
               href="#gallery"
-              className={`group relative overflow-hidden rounded-sm bg-neutral-50 border border-black/10 ${f.span} min-h-[220px]`}
+              className={`group relative overflow-hidden rounded-sm bg-charcoal border border-white/10 ${f.span} min-h-[220px]`}
             >
               <img
                 src={f.img}
@@ -297,18 +297,18 @@ function Featured() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 via-neutral-900/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute left-0 right-0 bottom-0 p-5 flex items-end justify-between">
                 <div>
                   <div className="font-display uppercase text-[10px] tracking-[0.25em] text-brand-red mb-1">
                     Precise Build
                   </div>
-                  <div className="font-display font-extrabold uppercase text-2xl text-neutral-900 tracking-wide">
+                  <div className="font-display font-extrabold uppercase text-2xl text-white tracking-wide">
                     {f.title}
                   </div>
                 </div>
                 <div className="h-9 w-9 rounded-sm bg-brand-red flex items-center justify-center group-hover:bg-white transition-colors">
-                  <ArrowRight className="h-4 w-4 text-neutral-900 group-hover:text-brand-red transition-colors" />
+                  <ArrowRight className="h-4 w-4 text-white group-hover:text-brand-red transition-colors" />
                 </div>
               </div>
             </a>
@@ -345,7 +345,7 @@ function WhyChoose() {
   ];
 
   return (
-    <section id="why" className="relative py-24 bg-neutral-100 overflow-hidden">
+    <section id="why" className="relative py-24 bg-charcoal-2 overflow-hidden">
       <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-brand-red to-transparent opacity-40 hidden lg:block" />
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
@@ -354,13 +354,13 @@ function WhyChoose() {
             <div className="font-display uppercase text-xs tracking-[0.3em] text-brand-red mb-3">
               Why Precise
             </div>
-            <h2 className="font-display font-black uppercase text-neutral-900 text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
+            <h2 className="font-display font-black uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
               Honest Pricing.
               <br />
               <span className="text-brand-red">Real Craftsmanship.</span>
             </h2>
             <div className="mt-4 h-1 w-32 bg-brand-red" />
-            <p className="mt-6 text-neutral-600 leading-relaxed">
+            <p className="mt-6 text-white/70 leading-relaxed">
               We're a Frederick, MD-based contractor that lives and breathes brick, block,
               stone and concrete. When we show up, we get it done — clean, level, and
               built to last.
@@ -377,16 +377,16 @@ function WhyChoose() {
             {points.map((p) => (
               <div
                 key={p.n}
-                className="relative bg-neutral-50 border border-black/10 p-6 rounded-sm hover:border-brand-red/60 transition-colors"
+                className="relative bg-charcoal border border-white/10 p-6 rounded-sm hover:border-brand-red/60 transition-colors"
               >
                 <div className="font-display font-black text-6xl text-brand-red/20 leading-none">
                   {p.n}
                 </div>
-                <h3 className="font-display font-bold uppercase text-xl text-neutral-900 mt-2 tracking-wide">
+                <h3 className="font-display font-bold uppercase text-xl text-white mt-2 tracking-wide">
                   {p.title}
                 </h3>
                 <div className="my-3 h-px w-12 bg-brand-red" />
-                <p className="text-sm text-neutral-600 leading-relaxed">{p.desc}</p>
+                <p className="text-sm text-white/65 leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -398,11 +398,11 @@ function WhyChoose() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="bg-neutral-100/5 border border-black/10 px-4 py-3 rounded-sm">
-      <div className="font-display font-black text-3xl text-neutral-900 leading-none">
+    <div className="bg-black/40 border border-white/10 px-4 py-3 rounded-sm">
+      <div className="font-display font-black text-3xl text-white leading-none">
         {value}
       </div>
-      <div className="font-display uppercase text-[10px] tracking-[0.18em] text-neutral-500 mt-1">
+      <div className="font-display uppercase text-[10px] tracking-[0.18em] text-white/55 mt-1">
         {label}
       </div>
     </div>
@@ -434,7 +434,7 @@ function Gallery() {
           {items.map((it, i) => (
             <div
               key={i}
-              className="group relative aspect-square overflow-hidden rounded-sm border border-black/10"
+              className="group relative aspect-square overflow-hidden rounded-sm border border-white/10"
             >
               <img
                 src={it.img}
@@ -442,9 +442,9 @@ function Gallery() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/70 via-neutral-900/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
               <div className="absolute bottom-3 left-3 right-3">
-                <div className="font-display uppercase font-bold text-neutral-900 text-sm tracking-wider">
+                <div className="font-display uppercase font-bold text-white text-sm tracking-wider">
                   {it.label}
                 </div>
                 <div className="h-0.5 w-8 bg-brand-red mt-1" />
@@ -456,7 +456,7 @@ function Gallery() {
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-deep text-neutral-900 font-display font-bold uppercase tracking-wider px-7 py-4 rounded-sm shadow-lg shadow-brand-red/30 transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-deep text-white font-display font-bold uppercase tracking-wider px-7 py-4 rounded-sm shadow-lg shadow-brand-red/30 transition-all hover:-translate-y-0.5"
           >
             See More Completed Projects
             <ArrowRight className="h-4 w-4" />
@@ -470,18 +470,18 @@ function Gallery() {
 /* ---------------- SERVICE AREA ---------------- */
 function ServiceArea() {
   return (
-    <section id="areas" className="relative py-24 bg-neutral-50 overflow-hidden">
+    <section id="areas" className="relative py-24 bg-charcoal overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
         <div>
           <div className="font-display uppercase text-xs tracking-[0.3em] text-brand-red mb-3">
             Where We Work
           </div>
-          <h2 className="font-display font-black uppercase text-neutral-900 text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
+          <h2 className="font-display font-black uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
             Proudly Serving The Mid-Atlantic
           </h2>
           <div className="mt-4 h-1 w-32 bg-brand-red" />
-          <p className="mt-6 text-neutral-600 leading-relaxed text-lg">
-            Headquartered in <span className="text-neutral-900 font-semibold">Frederick, MD</span>,
+          <p className="mt-6 text-white/75 leading-relaxed text-lg">
+            Headquartered in <span className="text-white font-semibold">Frederick, MD</span>,
             we travel throughout the region for residential and light commercial masonry
             and concrete work.
           </p>
@@ -490,10 +490,10 @@ function ServiceArea() {
             {AREAS.map((a) => (
               <li
                 key={a}
-                className="flex items-center gap-3 bg-neutral-100 border border-black/10 px-4 py-3 rounded-sm"
+                className="flex items-center gap-3 bg-charcoal-2 border border-white/10 px-4 py-3 rounded-sm"
               >
                 <MapPin className="h-4 w-4 text-brand-red" />
-                <span className="font-display uppercase tracking-wider text-neutral-900 text-sm">
+                <span className="font-display uppercase tracking-wider text-white text-sm">
                   {a}
                 </span>
               </li>
@@ -502,13 +502,13 @@ function ServiceArea() {
 
           <a
             href="tel:2272254964"
-            className="mt-8 inline-flex items-center gap-3 text-neutral-900 hover:text-brand-red transition-colors"
+            className="mt-8 inline-flex items-center gap-3 text-white hover:text-brand-red transition-colors"
           >
             <div className="h-12 w-12 rounded-sm bg-brand-red flex items-center justify-center">
-              <Phone className="h-5 w-5 text-neutral-900" />
+              <Phone className="h-5 w-5 text-white" />
             </div>
             <div>
-              <div className="font-display uppercase text-[10px] tracking-[0.22em] text-neutral-500">
+              <div className="font-display uppercase text-[10px] tracking-[0.22em] text-white/55">
                 Call Today
               </div>
               <div className="font-display font-bold text-2xl tracking-wider">
@@ -521,7 +521,7 @@ function ServiceArea() {
         <div className="relative">
           <div className="aspect-square max-w-[520px] mx-auto relative">
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand-red/20 to-transparent blur-3xl" />
-            <div className="relative h-full w-full rounded-sm bg-neutral-100 border border-black/10 overflow-hidden">
+            <div className="relative h-full w-full rounded-sm bg-charcoal-2 border border-white/10 overflow-hidden">
               <iframe
                 title="Frederick, MD service area map"
                 src="https://www.google.com/maps?q=Frederick,MD&z=10&output=embed"
@@ -531,7 +531,7 @@ function ServiceArea() {
                 allowFullScreen
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-brand-red text-neutral-900 px-5 py-3 rounded-sm shadow-xl shadow-brand-red/40 font-display uppercase font-bold tracking-wider text-sm z-10">
+            <div className="absolute -bottom-4 -right-4 bg-brand-red text-white px-5 py-3 rounded-sm shadow-xl shadow-brand-red/40 font-display uppercase font-bold tracking-wider text-sm z-10">
               Home Base · Frederick, MD
             </div>
           </div>
@@ -545,11 +545,11 @@ function ServiceArea() {
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
   return (
-    <section id="contact" className="relative py-24 bg-neutral-100 overflow-hidden">
+    <section id="contact" className="relative py-24 bg-charcoal-2 overflow-hidden">
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <img src={imgBrick} alt="" className="h-full w-full object-cover" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-neutral-100/90 to-neutral-200/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-charcoal-2 via-charcoal-2/90 to-black/95" />
 
       <div className="relative mx-auto max-w-6xl px-4 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-10 items-stretch">
@@ -558,13 +558,13 @@ function Contact() {
               <div className="font-display uppercase text-xs tracking-[0.3em] text-brand-red mb-3">
                 Free Estimate
               </div>
-              <h2 className="font-display font-black uppercase text-neutral-900 text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
+              <h2 className="font-display font-black uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
                 Ready To Start
                 <br />
                 <span className="text-brand-red">Your Project?</span>
               </h2>
               <div className="mt-4 h-1 w-32 bg-brand-red" />
-              <p className="mt-6 text-neutral-600 leading-relaxed">
+              <p className="mt-6 text-white/75 leading-relaxed">
                 Tell us about the work. We'll come take a look, talk it through, and
                 send a clear, honest estimate — no pressure.
               </p>
@@ -575,35 +575,35 @@ function Contact() {
                 href="tel:2272254964"
                 className="flex items-center gap-4 bg-brand-red hover:bg-brand-red-deep transition-colors px-5 py-4 rounded-sm group"
               >
-                <Phone className="h-6 w-6 text-neutral-900" />
+                <Phone className="h-6 w-6 text-white" />
                 <div>
-                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-neutral-700">
+                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-white/80">
                     Call Now
                   </div>
-                  <div className="font-display font-bold text-2xl text-neutral-900 tracking-wider">
+                  <div className="font-display font-bold text-2xl text-white tracking-wider">
                     227-225-4964
                   </div>
                 </div>
               </a>
               <a
                 href="mailto:dan@precisemasonryandconcrete.com"
-                className="flex items-center gap-4 bg-neutral-50 border border-black/10 hover:border-brand-red/60 px-5 py-4 rounded-sm transition-colors"
+                className="flex items-center gap-4 bg-charcoal border border-white/10 hover:border-brand-red/60 px-5 py-4 rounded-sm transition-colors"
               >
                 <Mail className="h-5 w-5 text-brand-red" />
                 <div>
-                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-neutral-500">
+                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-white/55">
                     Email
                   </div>
-                  <div className="text-neutral-900 text-sm">dan@precisemasonryandconcrete.com</div>
+                  <div className="text-white text-sm">dan@precisemasonryandconcrete.com</div>
                 </div>
               </a>
-              <div className="flex items-center gap-4 bg-neutral-50 border border-black/10 px-5 py-4 rounded-sm">
+              <div className="flex items-center gap-4 bg-charcoal border border-white/10 px-5 py-4 rounded-sm">
                 <MapPin className="h-5 w-5 text-brand-red" />
                 <div>
-                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-neutral-500">
+                  <div className="font-display uppercase text-[10px] tracking-[0.22em] text-white/55">
                     Based In
                   </div>
-                  <div className="text-neutral-900 text-sm">Frederick, MD</div>
+                  <div className="text-white text-sm">Frederick, MD</div>
                 </div>
               </div>
             </div>
@@ -614,9 +614,9 @@ function Contact() {
               e.preventDefault();
               setSubmitted(true);
             }}
-            className="lg:col-span-3 bg-background border border-black/10 p-7 lg:p-10 rounded-sm shadow-2xl shadow-black/10 relative"
+            className="lg:col-span-3 bg-background border border-white/10 p-7 lg:p-10 rounded-sm shadow-2xl shadow-black/50 relative"
           >
-            <div className="absolute -top-3 left-7 bg-brand-red text-neutral-900 font-display uppercase text-xs tracking-[0.22em] px-3 py-1 rounded-sm">
+            <div className="absolute -top-3 left-7 bg-brand-red text-white font-display uppercase text-xs tracking-[0.22em] px-3 py-1 rounded-sm">
               Request Estimate
             </div>
 
@@ -625,10 +625,10 @@ function Contact() {
                 <div className="mx-auto h-16 w-16 rounded-full bg-brand-red/15 border border-brand-red flex items-center justify-center">
                   <CheckCircle2 className="h-8 w-8 text-brand-red" />
                 </div>
-                <h3 className="mt-6 font-display font-bold uppercase text-2xl text-neutral-900">
+                <h3 className="mt-6 font-display font-bold uppercase text-2xl text-white">
                   Thanks — We'll Be In Touch
                 </h3>
-                <p className="mt-2 text-neutral-600">
+                <p className="mt-2 text-white/70">
                   We typically respond within one business day. For a faster reply,
                   call <a href="tel:2272254964" className="text-brand-red font-bold">227-225-4964</a>.
                 </p>
@@ -644,7 +644,7 @@ function Contact() {
                     <select
                       name="project"
                       required
-                      className="mt-2 w-full bg-neutral-50 border border-black/15 focus:border-brand-red text-neutral-900 rounded-sm px-4 py-3 outline-none transition-colors"
+                      className="mt-2 w-full bg-charcoal border border-white/15 focus:border-brand-red text-white rounded-sm px-4 py-3 outline-none transition-colors"
                     >
                       <option value="">Select a project type…</option>
                       {SERVICES.map((s) => (
@@ -661,7 +661,7 @@ function Contact() {
                       name="message"
                       rows={4}
                       maxLength={1000}
-                      className="mt-2 w-full bg-neutral-50 border border-black/15 focus:border-brand-red text-neutral-900 rounded-sm px-4 py-3 outline-none transition-colors resize-none"
+                      className="mt-2 w-full bg-charcoal border border-white/15 focus:border-brand-red text-white rounded-sm px-4 py-3 outline-none transition-colors resize-none"
                       placeholder="Patio dimensions, location, timeline, anything we should know…"
                     />
                   </div>
@@ -669,12 +669,12 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-deep transition-all text-neutral-900 font-display font-bold uppercase tracking-wider px-6 py-4 rounded-sm shadow-lg shadow-brand-red/30 hover:-translate-y-0.5"
+                  className="mt-6 w-full inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-deep transition-all text-white font-display font-bold uppercase tracking-wider px-6 py-4 rounded-sm shadow-lg shadow-brand-red/30 hover:-translate-y-0.5"
                 >
                   Request My Free Estimate
                   <ArrowRight className="h-4 w-4" />
                 </button>
-                <p className="mt-3 text-center text-neutral-400 text-xs">
+                <p className="mt-3 text-center text-white/45 text-xs">
                   We respect your time and never share your information.
                 </p>
               </>
@@ -688,7 +688,7 @@ function Contact() {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-display uppercase text-[10px] tracking-[0.22em] text-neutral-500">
+    <span className="font-display uppercase text-[10px] tracking-[0.22em] text-white/60">
       {children}
     </span>
   );
@@ -714,7 +714,7 @@ function Field({
         type={type}
         required={required}
         maxLength={255}
-        className="mt-2 w-full bg-neutral-50 border border-black/15 focus:border-brand-red text-neutral-900 rounded-sm px-4 py-3 outline-none transition-colors"
+        className="mt-2 w-full bg-charcoal border border-white/15 focus:border-brand-red text-white rounded-sm px-4 py-3 outline-none transition-colors"
       />
     </div>
   );
@@ -723,13 +723,13 @@ function Field({
 /* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
-    <footer className="relative bg-neutral-100 border-t border-black/10">
+    <footer className="relative bg-black border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3">
             <img src={logo.url} alt="Precise Masonry & Concrete" className="h-14 w-14 rounded-full" />
             <div>
-              <div className="font-display font-extrabold uppercase text-neutral-900 text-lg leading-tight">
+              <div className="font-display font-extrabold uppercase text-white text-lg leading-tight">
                 Precise
               </div>
               <div className="font-display uppercase text-[10px] tracking-[0.22em] text-brand-red">
@@ -737,7 +737,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <p className="mt-4 text-sm text-neutral-500 max-w-xs">
+          <p className="mt-4 text-sm text-white/55 max-w-xs">
             Built Right. Built Precise. Family-run masonry &amp; concrete contractor
             serving the Mid-Atlantic.
           </p>
@@ -747,7 +747,7 @@ function Footer() {
           <div className="font-display uppercase text-xs tracking-[0.22em] text-brand-red mb-4">
             Services
           </div>
-          <ul className="space-y-2 text-sm text-neutral-600">
+          <ul className="space-y-2 text-sm text-white/70">
             {SERVICES.slice(0, 8).map((s) => (
               <li key={s.title}>
                 <a href="#services" className="hover:text-brand-red transition-colors">
@@ -762,7 +762,7 @@ function Footer() {
           <div className="font-display uppercase text-xs tracking-[0.22em] text-brand-red mb-4">
             Service Areas
           </div>
-          <ul className="space-y-2 text-sm text-neutral-600">
+          <ul className="space-y-2 text-sm text-white/70">
             {AREAS.map((a) => (
               <li key={a}>{a}</li>
             ))}
@@ -773,7 +773,7 @@ function Footer() {
           <div className="font-display uppercase text-xs tracking-[0.22em] text-brand-red mb-4">
             Contact
           </div>
-          <ul className="space-y-3 text-sm text-neutral-700">
+          <ul className="space-y-3 text-sm text-white/80">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-brand-red" /> 227-225-4964
             </li>
@@ -789,15 +789,15 @@ function Footer() {
           </ul>
           <a
             href="#contact"
-            className="mt-5 inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-deep text-neutral-900 font-display font-bold uppercase tracking-wider px-5 py-3 rounded-sm text-sm"
+            className="mt-5 inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-deep text-white font-display font-bold uppercase tracking-wider px-5 py-3 rounded-sm text-sm"
           >
             Free Estimate <ArrowRight className="h-4 w-4" />
           </a>
         </div>
       </div>
 
-      <div className="border-t border-black/10">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-400">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
           <div>© {new Date().getFullYear()} Precise Masonry & Concrete, LLC. All rights reserved.</div>
           <div className="font-display uppercase tracking-[0.22em]">
             Built Right. <span className="text-brand-red">Built Precise.</span>
@@ -823,12 +823,12 @@ function SectionHeading({
       <div className="font-display uppercase text-xs tracking-[0.3em] text-brand-red mb-3">
         {kicker}
       </div>
-      <h2 className="font-display font-black uppercase text-neutral-900 text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
+      <h2 className="font-display font-black uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[0.95]">
         {title}
       </h2>
       <div className="mt-4 h-1 w-32 bg-brand-red" />
       {subtitle && (
-        <p className="mt-5 text-neutral-600 text-lg leading-relaxed">{subtitle}</p>
+        <p className="mt-5 text-white/70 text-lg leading-relaxed">{subtitle}</p>
       )}
     </div>
   );
