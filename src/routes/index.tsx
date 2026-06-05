@@ -133,10 +133,14 @@ function Hero() {
         alt="Custom stone patio with fire pit and outdoor fireplace at dusk"
         width={1920}
         height={1080}
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover brightness-125 contrast-110 saturate-110"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+      {/* Subtle full overlay just to anchor contrast — keeps work visible */}
+      <div className="absolute inset-0 -z-10 bg-black/15" />
+      {/* Localized dark wash behind the headline + CTA column only */}
+      <div className="absolute inset-y-0 left-0 -z-10 w-full md:w-[60%] lg:w-[55%] bg-gradient-to-r from-black/85 via-black/60 to-transparent" />
+      {/* Bottom fade so the marquee strip seam stays clean */}
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-black/70 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 lg:px-8 w-full">
         <div className="max-w-3xl">
