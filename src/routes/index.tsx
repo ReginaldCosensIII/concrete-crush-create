@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { BrushAccent } from "@/components/site/BrushAccent";
-import logo from "@/assets/precise-logo.jpg.asset.json";
+import logo from "@/assets/precise-logo.jpg";
 import heroImg from "@/assets/hero-patio.jpg";
 import imgBrick from "@/assets/project-brick.jpg";
 import imgRetaining from "@/assets/project-retaining-wall.jpg";
@@ -731,7 +731,7 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="Precise Masonry & Concrete" className="h-14 w-14 rounded-full" />
+            <img src={logo} alt="Precise Masonry & Concrete" className="h-14 w-14 rounded-full" />
             <div>
               <div className="font-display font-extrabold uppercase text-white text-lg leading-tight">
                 Precise
