@@ -4,7 +4,9 @@ export default defineConfig({
   nitro: {
     preset: "vercel",
     output: {
-      dir: ".vercel/output" // Forces Lovable to stop outputting to dist/
+      dir: ".vercel/output",
+      serverDir: ".vercel/output/functions/__nitro.func",
+      publicDir: ".vercel/output/static"
     }
   },
   tanstackStart: {
