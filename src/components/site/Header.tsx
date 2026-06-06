@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import logo from "@/assets/precise-logo.jpg.asset.json";
+import logo from "@/assets/precise-logo.jpg";
 
 const NAV = [
   { label: "Home", href: "#top" },
@@ -33,7 +33,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between h-20">
         <a href="#top" className="flex items-center gap-3 group">
           <img
-            src={logo.url}
+            src={logo}
             alt="Precise Masonry & Concrete logo"
             width={56}
             height={56}
